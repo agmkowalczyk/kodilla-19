@@ -17,11 +17,11 @@ function comments(state = [], action) {
         case REMOVE_COMMENT:
             return state.comments.filter(comment => comment.id !== action.id);            
         case EDIT_COMMENT:
-            return state.comments.map(comment => comment.id === action.id ? {text: action.text} : comment);            
+            return state.comments.map(comment => comment.id === action.id ? {...comment, text: action.text} : comment);            
         case THUMB_UP_COMMENT:
-            return state.comments.map(comment => comment.id === action.id ? {votes: comment.votes + 1} : comment);            
+            return state.comments.map(comment => comment.id === action.id ? {...comment, votes: comment.votes + 1} : comment);            
         case THUMB_DOWN_COMMENT:
-            return state.comments.map(comment => comment.id === action.id ? {votes: comment.votes - 1} : comment);                                    
+            return state.comments.map(comment => comment.id === action.id ? {...comment, votes: comment.votes - 1} : comment);                                    
         default:
             return state;
     }
