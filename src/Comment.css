@@ -1,0 +1,23 @@
+span.votes {
+  font-size: 0.7em;
+}
+
+button.remove {
+  font-size: 0.7em;
+  padding: 1px;
+  line-height: 1em;
+  vertical-align: middle;
+  border: none;
+  margin-right: 7px;
+}
+
+ul li {
+  width: 90%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px
+}
+
+ul button {
+  margin: 0 3px;
+}

@@ -6,7 +6,7 @@ export const EDIT_COMMENT = 'EDIT_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
-function addComment(text) {
+export function addComment(text) {
     return {
         type: ADD_COMMENT,
         text,
@@ -14,14 +14,14 @@ function addComment(text) {
     }
 }
 
-function removeComment(id) {
+export function removeComment(id) {
     return {
-        type: ADD_COMMENT,
+        type: REMOVE_COMMENT,
         id
     }
 }
 
-function editComment(id, text) {
+export function editComment(id, text) {
     return {
         type: EDIT_COMMENT,
         id,
@@ -29,25 +29,18 @@ function editComment(id, text) {
     }
 }
 
-function thumbUpComment(id) {
+export function thumbUpComment(id) {
     return {
         type: THUMB_UP_COMMENT,
         id
     }
 }
 
-function thumbDownComment(id) {
+export function thumbDownComment(id) {
     return {
         type: THUMB_DOWN_COMMENT,
         id
     }
 }
 
-const boundAddComment = text => dispatch(addComment(text));
-const boundRemoveComment = text => dispatch(removeComment(id));
-const boundEditComment = text => dispatch(editComment(id, text));
-const boundThumbUpComment = text => dispatch(ThumbUpComment(id));
-const boundThumbDownComment = text => dispatch(ThumbDownComment(id));
-
-// boundAddComment('nowy komentarz!');
-// boundAddComment('kolejny nowy komentarz!');
+export default addComment;

@@ -1,0 +1,12 @@
+form {
+	text-align: center;
+}
+
+form input {
+	margin: 3px 10px;
+	padding: 10px;
+}
+
+.textInput {
+	width: 480px;
+}
